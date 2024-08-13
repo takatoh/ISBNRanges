@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["takatoh"]
   spec.email = ["takatoh.m@gmail.com"]
 
-  spec.summary = "Range difinitions of ISBN registration groups and registrants."
+  spec.summary = "Range definitions of ISBN registration groups and registrants."
 #  spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "https://github.com/takatoh/isbnranges"
   spec.required_ruby_version = ">= 3.0.0"
