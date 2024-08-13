@@ -7,6 +7,7 @@ require "optparse"
 RANGE_MESSAGE_FILE = "RangeMessage.xml"
 REGISTRATION_GROUP_RANGES_FILE = "registration_group_ranges.txt"
 REGISTRANT_RANGES_FILE = "registrant_ranges.txt"
+RANGE_DATE_FILE = "range_date.txt"
 
 
 def main
@@ -39,6 +40,11 @@ def main
     File.join(options[:dir], REGISTRANT_RANGES_FILE),
     metadata
   )
+  range_date_file = File.join(options[:dir], RANGE_DATE_FILE)
+  File.open(range_date_file, "w") do |f|
+    f.puts metadata[:date]
+  end
+  $stderr.puts "Generated: #{range_date_file}"
 end
 
 def extract_ranges(nodes)
