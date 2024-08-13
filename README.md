@@ -2,6 +2,9 @@
 
 The range definitions of ISBN registration groups and registrants.
 
+All ranges of registration groups and registrants are supported.
+Those depends on 'RangeMessage.xml' file, downloaded from [International ISBN Agency](https://www.isbn-international.org/range_file_generation).
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
