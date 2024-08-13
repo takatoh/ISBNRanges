@@ -1,31 +1,39 @@
 # ISBNRanges
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/isbnranges`. To experiment with that code, run `bin/console` for an interactive prompt.
+The range definitions of ISBN registration groups and registrants.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add isbnranges
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install isbnranges
 
 ## Usage
 
-TODO: Write usage instructions here
+After `require 'isbnranges'`, you can refer to the following constants:
 
-## Development
+- ISBNRanges::REGISTRATION_GROUP_RANGES
+- ISBNRanges::REGISTRANT_RANGES
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Both constants are HASHs with the prefix as the key. The value corresponding to the key is an Array of ranges defined under the prefix. Each range is a String whose beginning and end are joined by `-`, so it can be easily modified into a form that is convenient for you.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    irb(main):001:0> require 'isbnranges'
+    => true
+    irb(main):002:0> ISBNRanges::REGISTRATION_GROUP_RANGES
+    =>
+    {"978"=>["0-5", "600-649", "65-65", "7-7", "80-94", "950-989", "9900-9989", "99900-99999"],
+     "979"=>["10-15", "8-8"]}
+    irb(main):003:0> ISBNRanges::REGISTRANT_RANGES["978-4"]
+    => ["00-19", "200-699", "7000-8499", "85000-89999", "900000-949999", "9500000-9999999"]
+
+## License
+
+MIT License
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/isbnranges.
+Bug reports and pull requests are welcome on GitHub at https://github.com/takatoh/ISBNRanges.
