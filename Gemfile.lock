@@ -30,7 +30,7 @@ PLATFORMS
 
 DEPENDENCIES
   isbnranges!
-  nokogiri (~> 1.16)
+  nokogiri
   rake (~> 13.0)
   rspec (~> 3.0)
 
