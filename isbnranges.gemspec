@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Range definitions of ISBN registration groups and registrants."
 #  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "https://github.com/takatoh/isbnranges"
+  spec.homepage = "https://github.com/takatoh/ISBNRanges"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.licenses = ["MIT"]
