@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/takatoh/isbnranges"
   spec.required_ruby_version = ">= 3.0.0"
 
+  spec.licenses = ["MIT"]
+
 #  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
 #  spec.metadata["homepage_uri"] = spec.homepage
