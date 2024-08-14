@@ -72,7 +72,7 @@ def output_range_file(ranges, range_file, metadata)
     f.puts "#"
     ranges.each do |range|
       f.puts "# " + range["agency"]
-      f.puts range["prefix"] + ":" + range["ranges"].join(",")
+      f.puts [range["prefix"], range["ranges"].join(","), range["agency"]].join(":")
     end
   end
   $stderr.puts "Generated: #{range_file}"
