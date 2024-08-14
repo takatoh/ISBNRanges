@@ -25,7 +25,10 @@ module ISBNRanges
   end
 
   data_dir = __dir__ + "/../data"
-  REGISTRATION_GROUP_RANGES, _ = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRATION_GROUP_RANGES_FILE}")
-  REGISTRANT_RANGES, REGISTRATION_GROUP_AGENCY = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRANT_RANGES_FILE}")
-  RANGE_DATE = Date.parse(File.read("#{data_dir}/#{ISBNRanges::RANGE_DATE_FILE}"))
+  registration_group_ranges_file = File.join(data_dir, ISBNRanges::REGISTRATION_GROUP_RANGES_FILE)
+  registrant_ranges_file = File.join(data_dir, ISBNRanges::REGISTRANT_RANGES_FILE)
+  range_date_file = File.join(data_dir, ISBNRanges::RANGE_DATE_FILE)
+  REGISTRATION_GROUP_RANGES, _ = load_ranges(registration_group_ranges_file)
+  REGISTRANT_RANGES, REGISTRATION_GROUP_AGENCY = load_ranges(registrant_ranges_file)
+  RANGE_DATE = Date.parse(File.read(range_date_file))
 end
