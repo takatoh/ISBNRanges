@@ -1,13 +1,8 @@
 # encoding: utf-8
 
+require_relative "../lib/isbnranges/datafiles"
 require "nokogiri"
 require "optparse"
-
-
-RANGE_MESSAGE_FILE = "RangeMessage.xml"
-REGISTRATION_GROUP_RANGES_FILE = "registration_group_ranges.txt"
-REGISTRANT_RANGES_FILE = "registrant_ranges.txt"
-RANGE_DATE_FILE = "range_date.txt"
 
 
 def main
@@ -20,7 +15,7 @@ def main
   }
   opts.parse!
 
-  doc = File.open(RANGE_MESSAGE_FILE, "r"){|f| Nokogiri::XML(f) }
+  doc = File.open(ISBNRanges::RANGE_MESSAGE_FILE, "r"){|f| Nokogiri::XML(f) }
 
   metadata = {
     source: doc.xpath("//MessageSource").text,
@@ -32,15 +27,15 @@ def main
 
   output_range_file(
     registration_groups,
-    File.join(options[:dir], REGISTRATION_GROUP_RANGES_FILE),
+    File.join(options[:dir], ISBNRanges::REGISTRATION_GROUP_RANGES_FILE),
     metadata
   )
   output_range_file(
     registrants,
-    File.join(options[:dir], REGISTRANT_RANGES_FILE),
+    File.join(options[:dir], ISBNRanges::REGISTRANT_RANGES_FILE),
     metadata
   )
-  range_date_file = File.join(options[:dir], RANGE_DATE_FILE)
+  range_date_file = File.join(options[:dir], ISBNRanges::RANGE_DATE_FILE)
   File.open(range_date_file, "w") do |f|
     f.puts metadata[:date]
   end
