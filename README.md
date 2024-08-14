@@ -19,16 +19,16 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 After `require "isbnranges"`, you can refer to the following constants.
 
-- ISBNRanges::REGISTRATION_GROUP_RANGES
-- ISBNRanges::REGISTRANT_RANGES
+- `ISBNRanges::REGISTRATION_GROUP_RANGES`
+- `ISBNRanges::REGISTRANT_RANGES`
 
 Both constants are HASHs with the prefix as the key. The value corresponding to the key is an Array of ranges defined under the prefix. Each range is a String whose beginning and end are joined by `-`, so it can be easily modified into a form that is convenient for you.
 
-- ISBNRanges::REGISTRATION_GROUP_AGENCY
+- `ISBNRanges::REGISTRATION_GROUP_AGENCY`
 
 This constant is also a HASH with the prefix as the key, and the corresponding value is the national agency name to which the prefix is assigned.
 
-- ISBNRanges::RANGE_DATE
+- `ISBNRanges::RANGE_DATE`
 
 This constant holds the defined date of the information contained in the range files.
 
