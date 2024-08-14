@@ -12,18 +12,23 @@ module ISBNRanges
 
   def load_ranges(range_file)
     ranges = {}
+    agencies = {}
     File.open(range_file, "r") do |f|
       f.each_line do |line|
         next if line.start_with?("#")
-        g, r = line.chomp.split(":")
+        g, r, a = line.chomp.split(":")
         ranges[g] = r.split(",") unless r.nil?
+        agencies[g] = a unless r.nil?
       end
     end
-    ranges
+    [ranges, agencies]
   end
 
   data_dir = __dir__ + "/../data"
-  REGISTRATION_GROUP_RANGES = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRATION_GROUP_RANGES_FILE}")
-  REGISTRANT_RANGES = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRANT_RANGES_FILE}")
-  RANGE_DATE = Date.parse(File.read("#{data_dir}/#{ISBNRanges::RANGE_DATE_FILE}"))
+  registration_group_ranges_file = File.join(data_dir, ISBNRanges::REGISTRATION_GROUP_RANGES_FILE)
+  registrant_ranges_file = File.join(data_dir, ISBNRanges::REGISTRANT_RANGES_FILE)
+  range_date_file = File.join(data_dir, ISBNRanges::RANGE_DATE_FILE)
+  REGISTRATION_GROUP_RANGES, _ = load_ranges(registration_group_ranges_file)
+  REGISTRANT_RANGES, REGISTRATION_GROUP_AGENCY = load_ranges(registrant_ranges_file)
+  RANGE_DATE = Date.parse(File.read(range_date_file))
 end
