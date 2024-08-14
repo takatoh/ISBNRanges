@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "isbnranges/version"
+require_relative "isbnranges/datafiles"
 require "date"
 
 module ISBNRanges
@@ -22,7 +23,7 @@ module ISBNRanges
   end
 
   data_dir = __dir__ + "/../data"
-  REGISTRATION_GROUP_RANGES = load_ranges("#{data_dir}/registration_group_ranges.txt")
-  REGISTRANT_RANGES = load_ranges("#{data_dir}/registrant_ranges.txt")
-  RANGE_DATE = Date.parse(File.read("#{data_dir}/range_date.txt"))
+  REGISTRATION_GROUP_RANGES = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRATION_GROUP_RANGES_FILE}")
+  REGISTRANT_RANGES = load_ranges("#{data_dir}/#{ISBNRanges::REGISTRANT_RANGES_FILE}")
+  RANGE_DATE = Date.parse(File.read("#{data_dir}/#{ISBNRanges::RANGE_DATE_FILE}"))
 end
