@@ -5,7 +5,7 @@ The range definitions of ISBN registration groups and registrants.
 This library provides programmer-friendly versions of data published by International ISBN Agency. It does NOT provide any manipulation of the data.
 
 All ranges of registration groups and registrants are supported.
-Those depends on 'RangeMessage.xml' file, downloaded from [International ISBN Agency](https://www.isbn-international.org/range_file_generation).
+Those depend on 'RangeMessage.xml' file, downloaded from [International ISBN Agency](https://www.isbn-international.org/range_file_generation).
 
 ## Installation
 
