@@ -17,7 +17,7 @@ module ISBNRanges
       f.each_line do |line|
         next if line.start_with?("#")
         g, r, a = line.chomp.split(":")
-        ranges[g] = r.split(",") unless r.nil?
+        ranges[g] = r.split(",").map{|r| r.split("-")} unless r.nil?
         agencies[g] = a unless r.nil?
       end
     end
