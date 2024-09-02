@@ -7,6 +7,8 @@ This library provides programmer-friendly versions of data published by Internat
 All ranges of registration groups and registrants are supported.
 Those depend on 'RangeMessage.xml' file, downloaded from [International ISBN Agency](https://www.isbn-international.org/range_file_generation).
 
+NOTE: Updated range files to latest version on September 2, 2024.
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
