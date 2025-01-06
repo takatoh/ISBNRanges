@@ -7,7 +7,7 @@ This library provides programmer-friendly versions of data published by Internat
 All ranges of registration groups and registrants are supported.
 Those depend on 'RangeMessage.xml' file, downloaded from [International ISBN Agency](https://www.isbn-international.org/range_file_generation).
 
-NOTE: Updated range files to latest version on December 4, 2024.
+NOTE: Updated range files to latest version on January 6, 2025.
 
 ## Installation
 
