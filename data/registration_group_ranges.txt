@@ -1,7 +1,7 @@
 # Generated from RangeMessage.xml file, downloaded from https://www.isbn-international.org/range_file_generation.
 #
 # International ISBN Agency
-# Fri, 4 Apr 2025 12:43:14 BST
+# Fri, 2 May 2025 22:15:10 BST
 #
 # International ISBN Agency
 978:0-5,600-649,65-65,7-7,80-94,950-989,9900-9989,99900-99999:International ISBN Agency
