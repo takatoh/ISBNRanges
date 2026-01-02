@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module ISBNRanges
-  VERSION = "2025.12"
+  VERSION = "2026.1"
 end
