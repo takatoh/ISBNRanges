@@ -1,9 +1,9 @@
 # Generated from RangeMessage.xml file, downloaded from https://www.isbn-international.org/range_file_generation.
 #
 # International ISBN Agency
-# Sat, 7 Feb 2026 11:34:11 GMT
+# Sat, 7 Mar 2026 03:38:54 GMT
 #
 # International ISBN Agency
-978:0-5,600-649,65-65,7-7,80-94,950-989,9900-9989,99900-99999:International ISBN Agency
+978:0-5,600-649,65-65,69990-69999,7-7,80-94,950-989,9900-9989,99900-99999:International ISBN Agency
 # International ISBN Agency
 979:10-15,8-8:International ISBN Agency
